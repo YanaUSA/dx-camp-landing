@@ -1,15 +1,37 @@
-$font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-$line-height: 1.5;
-$font-weight: 400;
+@import './styles/fonts.module.scss';
+@import './styles/theme-colors.module.scss';
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/roboto-mono-v22-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/kanit-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/kanit-v15-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 :root {
-  font-family: $font-family;
-  line-height: $line-height;
-  font-weight: $font-weight;
+  font-family: $roboto;
+  line-height: 1.5;
+  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: getColor('background');
+  color:getColor('white');
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
