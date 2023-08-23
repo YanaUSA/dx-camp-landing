@@ -1,0 +1,67 @@
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/theme-colors.module.scss";
+@import "../../styles/fonts.module.scss";
+@import "../../styles/mixins.module.scss";
+
+.button {
+  display: inline-block;
+
+  font-family: $roboto;
+  font-size: getFontSize("l-small");
+  font-weight: 500;
+  line-height: 1.5;
+  //   letter-spacing: 0.06em;
+
+  color: getColor("white");
+  background-color: getColor("main-button-color");
+
+  padding: 10px 16px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+
+  transition: background-color $transition-time $cubic;
+
+  &:hover,
+  &:focus {
+    background-color: getColor("btn-hover");
+  }
+
+  &.headerBtn {
+    width: 136px;
+    height: 40px;
+
+    @include respond-to("tablet") {
+      width: 235px;
+      height: 48px;
+    }
+  }
+
+  &.featuresBtn {
+    width: 297px;
+    height: 48px;
+
+    @include respond-to("tablet") {
+      width: 189px;
+    }
+
+    @include respond-to("tablet") {
+      width: 325px;
+    }
+  }
+
+  &.formBtn {
+    width: 294px;
+    height: 48px;
+
+    @include respond-to("tablet") {
+      width: 235px;
+    }
+  }
+
+  &.unActive {
+    cursor: auto;
+    color: getColor('dark-grey');
+    background-color: getColor("light-grey");
+  }
+}

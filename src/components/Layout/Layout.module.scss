@@ -1,8 +1,33 @@
-@import '../../styles/breakpoints.module.scss';
-@import '../../styles/theme-colors.module.scss';
-@import '../../styles/fonts.module.scss';
-@import '../../styles/mixins.module.scss';
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/theme-colors.module.scss";
+@import "../../styles/fonts.module.scss";
+@import "../../styles/mixins.module.scss";
 
-.pageContainer {
-    display: flex;
+.container {
+  // width: 480px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @include respond-to("tablet") {
+    // width: 744px;
+    // padding: 0 24px;
+  }
+
+  @include respond-to("desktop") {
+    width: 1440px;
+    padding: 0 120px;
+  }
+}
+
+main {
+  margin-top: 40px;
+
+  @include respond-to("tablet") {
+    margin-top: 78px; 
+  }
+
+  @include respond-to("desktop") {
+    // margin-top: 78px; 
+  }
 }

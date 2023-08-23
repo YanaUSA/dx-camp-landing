@@ -1,2 +1,35 @@
+// --- fonts --- //
 $roboto: 'Roboto Mono', monospace;
 $kanit: 'Kanit', sans-serif;
+
+// --- font-sizes --- //
+$fontSizes: (
+    's-small': 12px,
+    'm-small': 14px,
+    'l-small': 16px,
+    's-medium': 18px,
+    'm-medium': 20px,
+    'l-medium': 24px,
+    's-large': 48px,
+    'm-large': 112px,
+    'l-large': 120px,
+    's-mega-large': 140px,
+    'm-mega-large': 280px,
+    'l-mega-large': 340px,
+);
+
+@function getFontSize($key) {
+  @return map-get($fontSizes, $key);
+}
+
+
+// line-height: 1.7;
+// line-height: 1.5;
+// line-height: 1.4;
+// line-height: 1.3;
+// line-height: 1.25;
+// line-height: 1;
+
+
+// font-weight: 400;
+// font-weight: 500;

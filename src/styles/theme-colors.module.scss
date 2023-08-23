@@ -1,16 +1,22 @@
 //--- colors ---//
 
 $colors: (
-'white': #FFFFFF,
-'black': #000,
-'accent-blue': #09237E,
-'warning-rose': #EB3795,
-'dark-grey': #2F2F2F,
-'light-grey': #B3B3B3,
-'main-button-color': #272A2E,
-'background': #060412,
+  "white": #ffffff,
+  "black": #000,
+  "accent-blue": #09237e,
+  "warning-rose": #eb3795,
+  "dark-grey": #2f2f2f,
+  "light-grey": #b3b3b3,
+  "main-button-color": #272a2e,
+  "btn-hover": #272a2ee6,
+  "background": #060412,
 );
 
 @function getColor($key) {
   @return map-get($colors, $key);
 }
+
+// --- transitions --- //
+
+$transition-time: 250ms;
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);

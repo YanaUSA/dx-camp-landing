@@ -1,5 +1,11 @@
-@import './styles/fonts.module.scss';
-@import './styles/theme-colors.module.scss';
+// @import './styles/fonts.module.scss';
+// @import './styles/theme-colors.module.scss';
+
+@import "./styles/reset.module.scss";
+@import "./styles/breakpoints.module.scss";
+@import "./styles/theme-colors.module.scss";
+@import "./styles/fonts.module.scss";
+@import "./styles/mixins.module.scss";
 
 @font-face {
   font-display: swap;
@@ -25,6 +31,8 @@
   src: url("./assets/fonts/kanit-v15-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+html,
+body,
 :root {
   font-family: $roboto;
   line-height: 1.5;
