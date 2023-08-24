@@ -35,8 +35,10 @@ html,
 body,
 :root {
   font-family: $roboto;
-  line-height: 1.5;
+  font-size: 16px;
+  // line-height: 1.5;
   font-weight: 400;
+  letter-spacing: 0.02em;
 
   background-color: getColor('background');
   color:getColor('white');
