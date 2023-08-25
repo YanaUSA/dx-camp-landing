@@ -8,44 +8,57 @@
 
   display: flex;
   flex-direction: column;
-//   justify-content: center;
+  //   justify-content: center;
   align-items: center;
-
 
   @include respond-to("tablet") {
     flex-direction: row-reverse;
   }
 
   @include respond-to("desktop") {
-//    flex-direction: row;
-//     justify-content: space-between;
+    //    flex-direction: row;
+    //     justify-content: space-between;
   }
 }
 
-.socialIconList {
+.socialLinksList {
   display: flex;
   margin: 12px 0;
 
   @include respond-to("tablet") {
-    width: 100%;    
+    width: 100%;
     justify-content: center;
   }
 
   @include respond-to("desktop") {
     // justify-content: center;
-
   }
 }
 
-.socialIconItem {
-    width: 32px;
-    height: 32px;
-    outline: 1px solid green;
+.socialLinksItem {
+  width: 32px;
+  height: 32px;
+  fill: getColor("white");
+  transition: background-color $transition-time $cubic;
 
-    fill: red;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    width: 100%;
+    height: 100%;
+
+    transition: fill $transition-time $cubic;
+  }  
+  
   &:not(:last-child) {
     margin-right: 32px;
+  }
+
+  &:hover,
+  :focus {
+    fill: getColor("light-grey");
   }
 }
 
@@ -69,14 +82,14 @@
     width: 100%;
     margin: 0;
     font-size: getFontSize("l-small");
-    }
+  }
 
-    @include respond-to("desktop") {
-        // width: 100%;
-        // margin: 38px 0;
-        // text-align: center;
-        font-size: getFontSize("s-medium");
-      }
+  @include respond-to("desktop") {
+    // width: 100%;
+    // margin: 38px 0;
+    // text-align: center;
+    font-size: getFontSize("s-medium");
+  }
 }
 
 .copywrite {
@@ -90,12 +103,12 @@
     width: 100%;
     margin: 0;
     font-size: getFontSize("l-small");
-    }
+  }
 
-    @include respond-to("desktop") {
-        // width: 100%;
-        // margin: 38px 0;
-        // text-align: center;
-        font-size: getFontSize("s-medium");
-      }
+  @include respond-to("desktop") {
+    // width: 100%;
+    // margin: 38px 0;
+    // text-align: center;
+    font-size: getFontSize("s-medium");
+  }
 }
