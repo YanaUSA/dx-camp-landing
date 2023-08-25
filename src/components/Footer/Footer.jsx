@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className={styles.footer}>
         <ul className={styles.socialLinksList}>
           <li class={styles.socialLinksItem}>
-            <a class={styles.socialLinksItem__link} href="#">
+            <a class={styles.socialLinksItem__link} target="_blank" href="#">
               <Icon
                 name="icon-FB"
                 widthSize="32"
@@ -17,7 +17,7 @@ const Footer = () => {
             </a>
           </li>
           <li class={styles.socialLinksItem}>
-            <a class={styles.socialLinksItem__link} href="#">
+            <a class={styles.socialLinksItem__link} target="_blank" href="#">
               <Icon
                 name="icon-Instagram"
                 widthSize="32"
@@ -27,7 +27,7 @@ const Footer = () => {
             </a>
           </li>
           <li class={styles.socialLinksItem}>
-            <a class={styles.socialLinksItem__link} href="#">
+            <a class={styles.socialLinksItem__link} target="_blank" href="#">
               <Icon
                 name="icon-Discord"
                 widthSize="32"
@@ -37,7 +37,7 @@ const Footer = () => {
             </a>
           </li>
           <li class={styles.socialLinksItem}>
-            <a class={styles.socialLinksItem__link} href="#">
+            <a class={styles.socialLinksItem__link} target="_blank" href="#">
               <Icon
                 name="icon-Telegram"
                 widthSize="32"

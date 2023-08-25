@@ -8,7 +8,6 @@
 
   display: flex;
   flex-direction: column;
-  //   justify-content: center;
   align-items: center;
 
   @include respond-to("tablet") {
@@ -85,9 +84,6 @@
   }
 
   @include respond-to("desktop") {
-    // width: 100%;
-    // margin: 38px 0;
-    // text-align: center;
     font-size: getFontSize("s-medium");
   }
 }
@@ -106,9 +102,6 @@
   }
 
   @include respond-to("desktop") {
-    // width: 100%;
-    // margin: 38px 0;
-    // text-align: center;
     font-size: getFontSize("s-medium");
   }
 }

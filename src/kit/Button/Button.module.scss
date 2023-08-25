@@ -4,13 +4,14 @@
 @import "../../styles/mixins.module.scss";
 
 .button {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   font-family: $roboto;
   font-size: getFontSize("l-small");
   font-weight: 500;
   line-height: 1.5;
-  //   letter-spacing: 0.06em;
 
   color: getColor("white");
   background-color: getColor("main-button-color");
@@ -30,10 +31,13 @@
   &.headerBtn {
     width: 136px;
     height: 40px;
+    font-size: getFontSize("m-small");
+    line-height: 1.7;
 
     @include respond-to("tablet") {
       width: 235px;
       height: 48px;
+      font-size: getFontSize("l-small");
     }
   }
 
@@ -61,7 +65,7 @@
 
   &.unActive {
     cursor: auto;
-    color: getColor('dark-grey');
+    color: getColor("dark-grey");
     background-color: getColor("light-grey");
   }
 }

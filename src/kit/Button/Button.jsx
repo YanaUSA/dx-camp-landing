@@ -1,6 +1,6 @@
 import styles from './Button.module.scss';
 
-const Button = ({ variant,  type, isDisabled, onClick, children }) => {
+const Button = ({ variant, type, isDisabled, onClick, children }) => {
     const buttonClass = isDisabled
         ? `${styles.button} ${styles.unActive} ${styles[variant]}`
         : `${styles.button} ${styles[variant]}`;

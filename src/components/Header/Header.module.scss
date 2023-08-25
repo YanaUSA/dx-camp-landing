@@ -4,53 +4,39 @@
 @import "../../styles/mixins.module.scss";
 
 .header {
-  outline: 2px solid red;
-    
+  // outline: 2px solid red;
+  border: 0;
+
   position: fixed;
   z-index: 99;
   top: 0;
   left: 0;
-  height: 40px;
-  // padding: 0 24px;
 
   @include respond-to("tablet") {
-    height: 78px;
-    // padding: 15px 0;
+    padding: 15px 0;
   }
 
-  @include respond-to("desktop") {
-    // padding: 0 120px;
-  }
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
 
   padding: 0 24px;
-}
-
-.logoIcon {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  // fill: getColor('white');
-  stroke: getColor('white');
-
-  @include respond-to("tablet") {
-      padding-top: 14px;
-      padding-bottom: 14px;
-      
-  }
 
   @include respond-to("desktop") {
-      font-size: 24px;
-      line-height: 1.17;        
+    max-width: 1439px;
+    padding: 0 120px;
   }
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  fill: getColor("white");
 }
 
 .btnIcon {
-  // fill: getColor('white');
-  stroke: getColor('white');
-
+  margin-right: 10px;
+  stroke: getColor("white");
 }
-
