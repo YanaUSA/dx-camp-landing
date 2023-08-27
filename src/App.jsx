@@ -1,13 +1,16 @@
-import StartPage from './pages/StartPage'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import StartPage from "./pages/StartPage";
 
 import "./App.scss";
 
 const App = () => {
   return (
-    <>
-      <StartPage/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<StartPage />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

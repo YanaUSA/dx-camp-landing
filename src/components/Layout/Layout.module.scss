@@ -4,14 +4,15 @@
 @import "../../styles/mixins.module.scss";
 
 .container {
-  // width: 480px;
-  // position: relative;
   margin: 0 auto;
   padding: 0 24px;
 
+  @include respond-to("mobile") {
+    // width: 375px;
+  }
+
   @include respond-to("tablet") {
     // width: 744px;
-    // padding: 0 24px;
   }
 
   @include respond-to("desktop") {
@@ -21,13 +22,19 @@
 }
 
 main {
-  margin-top: 40px;
+  // width: 100%;
+  margin-top: 42px;
 
   @include respond-to("tablet") {
-    margin-top: 78px; 
+    margin-top: 80px;
+  }
+}
+
+section {
+  margin-bottom: 65px;
+
+  @include respond-to("tablet") {
+    margin-bottom: 125px;
   }
 
-  @include respond-to("desktop") {
-    // margin-top: 78px; 
-  }
 }

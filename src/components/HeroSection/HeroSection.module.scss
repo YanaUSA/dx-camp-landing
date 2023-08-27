@@ -1,4 +1,43 @@
-@import '../../styles/breakpoints.module.scss';
-@import '../../styles/theme-colors.module.scss';
-@import '../../styles/fonts.module.scss';
-@import '../../styles/mixins.module.scss';
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/theme-colors.module.scss";
+@import "../../styles/fonts.module.scss";
+@import "../../styles/mixins.module.scss";
+
+.heroContainer {
+  outline: 2px solid green;
+//   width: 100%;
+}
+
+.heroTitle {
+    position: absolute;
+
+
+  font-family: $kanit;
+  font-size: getFontSize("s-mega-large");
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  @include respond-to("tablet") {
+    font-size: getFontSize("m-mega-large");
+    line-height: 1.25;
+  }
+
+  @include respond-to("desktop") {
+    font-size: getFontSize("l-mega-large");
+  }
+}
+
+.heroDescription {
+  font-size: getFontSize("m-small");
+  font-weight: 400;
+  line-height: 1.31;
+
+  @include respond-to("tablet") {
+    font-size: getFontSize("l-small");
+  }
+
+  @include respond-to("desktop") {
+    font-size: getFontSize("s-medium");
+  }
+}

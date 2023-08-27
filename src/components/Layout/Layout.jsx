@@ -8,8 +8,8 @@ const Layout = ({ children }) => {
     <>
       <div className={styles.container}>
         <Header />
-        <main>{children}</main>
-        <Footer />
+        <main>{ children }</main>
+        <Footer/>
       </div>
     </>
   );
