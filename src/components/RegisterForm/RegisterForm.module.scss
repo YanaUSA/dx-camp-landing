@@ -1,0 +1,17 @@
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/theme-colors.module.scss";
+@import "../../styles/fonts.module.scss";
+@import "../../styles/mixins.module.scss";
+
+.form {
+    width: 100%;
+    border: 1px solid getColor("accent-blue");
+
+   @include respond-mob-minMax {
+    margin: 24px 0;
+   }
+
+   @include respond-to("desktop") {
+    width: 50%;
+   }
+}

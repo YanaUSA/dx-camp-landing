@@ -27,38 +27,37 @@ const TopNFTsSection = () => {
 
     return (
       <section>       
-      <div>
+      <div className={styles.titleBox}>
       <h2>Top NFTs</h2>
-        <span>02</span>
+        <span className={styles.sectionTitleSpan}>02</span>
       </div>
-      <div className={styles}>
-      <table className={styles}>
-        <thead>
+
+      <table className={styles.NFTtable}>
+        <thead className={styles.NFTtableHead}>
           <tr>
-            <th className={styles}></th>
-            <th className={styles}>NFT Name</th>
-            <th className={styles}>Rarity Level</th>
-            <th className={styles}>Total Games</th>
-            <th className={styles}>Games Won</th>
-            <th className={styles}>Price (ETH)</th>
+            <th></th>
+            <th>NFT Name</th>
+            <th>Rarity Level</th>
+            <th>Total Games</th>
+            <th>Games Won</th>
+            <th>Price (ETH)</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className={styles.NFTtableBody}>
           {data.map((item, id) => (
             <tr key={id}>
-              <td className={styles}>
-                <img src={item.avatar} alt="NFT user avatar" className={styles} />
+              <td>
+                <img src={item.avatar} alt="NFT user avatar" className={styles.NFTuserAvatar} />
               </td>
-              <td className={styles}>{item.name}</td>
-              <td className={styles}>{item.rarity}</td>
-              <td className={styles}>{item.totalGames}</td>
-              <td className={styles}>{item.gamesWon}</td>
-              <td className={styles}>{item.price}</td>
+              <td>{item.name}</td>
+              <td>{item.rarity}</td>
+              <td>{item.totalGames}</td>
+              <td>{item.gamesWon}</td>
+              <td>{item.price}</td>
             </tr>
           ))}
         </tbody>
       </table>
-    </div>          
       </section>
     );
   };

@@ -1,4 +1,92 @@
-@import '../../styles/breakpoints.module.scss';
-@import '../../styles/theme-colors.module.scss';
-@import '../../styles/fonts.module.scss';
-@import '../../styles/mixins.module.scss';
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/theme-colors.module.scss";
+@import "../../styles/fonts.module.scss";
+@import "../../styles/mixins.module.scss";
+
+.sectionJoinUs {
+  margin-bottom: 46px;
+
+  @include respond-to("tablet") {
+    margin-bottom: 76px;
+  }
+
+  @include respond-to("desktop") {
+    margin-bottom: 125px;
+  }
+}
+
+.joinUsContainer {
+  @include respond-to("desktop") {
+    display: flex;
+    justify-content: space-between;
+
+    // width: 100%;
+  }
+}
+
+.titleBox {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid getColor("white");
+
+  @include respond-to("tablet") {
+    margin-bottom: 56px;
+  }
+
+  @include respond-to("desktop") {
+    margin-bottom: 90px;
+  }
+}
+
+.sectionTitleSpan {
+  font-family: $kanit;
+  font-size: getFontSize("s-large");
+  font-weight: 400;
+  line-height: 1.5;
+
+  @include respond-to("tablet") {
+    font-size: getFontSize("m-large");
+    line-height: 1.25;
+  }
+
+  @include respond-to("desktop") {
+    font-size: getFontSize("s-mega-large");
+    line-height: 1;
+  }
+}
+
+.sectionDescriptionContainer {
+  @include respond-mob-minMax {
+    margin-top: 27px;
+    margin-bottom: 9px;
+  }
+
+  @include respond-to("tablet") {
+    margin-bottom: 56px;
+  }
+
+  @include respond-to("desktop") {
+    width: 50%;
+    margin-top: 20px;
+
+    margin-bottom: 0;
+  }
+}
+
+.sectionDescriptionTitle {
+  margin-bottom: 12px;
+
+  @include respond-to("desktop") {
+    margin-bottom: 16px;
+  }
+}
+
+.sectionDescription {
+  width: 100%;
+
+  @include respond-to("tablet") {
+    width: 90%;
+  }
+}

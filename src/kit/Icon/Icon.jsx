@@ -1,4 +1,5 @@
 import icons from "../../assets/icons/sprite.svg";
+// import styles from './Icon.module.scss'
 
 const Icon = ({ name, widthSize, heightSize, stroke, fill, iconClass }) => {
   const iconLink = `${icons}#${name}`;

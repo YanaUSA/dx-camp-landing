@@ -4,33 +4,57 @@
 @import "../../styles/mixins.module.scss";
 
 .footer {
-  outline: 2px solid blue;
+  // outline: 2px solid blue;
+  position: absolute;
+  left: 0;
+  width: 100vw;
+}
+
+.footerBox {
+  margin: 0 auto;
+  padding: 0 24px;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  border-top: 1px solid getColor("accent-blue");
 
-  @include respond-to("tablet") {
-    flex-direction: row-reverse;
+  @include respond-tab-minMax {
+    flex-wrap: wrap;
+    height: 100px;
   }
 
   @include respond-to("desktop") {
-    //    flex-direction: row;
-    //     justify-content: space-between;
+    flex-direction: row;
   }
 }
 
 .socialLinksList {
   display: flex;
-  margin: 12px 0;
 
-  @include respond-to("tablet") {
-    width: 100%;
+  @include respond-mob-minMax {
+    margin: 12px 0;
+  }
+
+  @include respond-tab-minMax {
+    flex: 0 0 100%;
+    width: 50%;
+    order: 2;
+
     justify-content: center;
+    align-items: center;
   }
 
   @include respond-to("desktop") {
-    // justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    width: calc(100% / 3);
+    padding: 34px 0;
+    border-left: 1px solid getColor("accent-blue");
+    border-right: 1px solid getColor("accent-blue");
   }
 }
 
@@ -49,8 +73,9 @@
     height: 100%;
 
     transition: fill $transition-time $cubic;
-  }  
-  
+
+  }
+
   &:not(:last-child) {
     margin-right: 32px;
   }
@@ -61,47 +86,64 @@
   }
 }
 
-.footerInfoBox {
-  @include respond-to("tablet") {
-    margin: 28px 0;
-    width: 100%;
-    justify-content: start;
-    align-items: center;
-  }
-}
-
 .developedBy {
-  margin-top: 8px;
-
   font-size: getFontSize("m-small");
   font-weight: 400;
   line-height: 1.31;
 
-  @include respond-to("tablet") {
-    width: 100%;
+  @include respond-mob-minMax {
+    margin-top: 8px;
+  }
+
+  @include respond-tab-minMax {
+    flex: 0 0 50%;
+    width: 50%;
+
+    display: flex;
+    align-items: end;
     margin: 0;
+    padding-bottom: 1px;
     font-size: getFontSize("l-small");
   }
 
   @include respond-to("desktop") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 3);
+    margin: 0;
+    padding: 38px 0;
     font-size: getFontSize("s-medium");
   }
 }
 
 .copywrite {
-  margin-bottom: 34px;
-
   font-size: getFontSize("m-small");
   font-weight: 400;
   line-height: 1.31;
 
-  @include respond-to("tablet") {
-    width: 100%;
+  @include respond-mob-minMax {
+    margin-bottom: 34px;
+  }
+
+  @include respond-tab-minMax {
+    flex: 0 0 50%;
+    order: 1;
+    display: flex;
+    align-items: start;
+    width: 50%;
     margin: 0;
+    padding-top: 1px;
     font-size: getFontSize("l-small");
   }
 
   @include respond-to("desktop") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    width: calc(100% / 3);
+    padding: 38px 0;
     font-size: getFontSize("s-medium");
   }
 }

@@ -1,0 +1,88 @@
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/theme-colors.module.scss";
+@import "../../styles/fonts.module.scss";
+@import "../../styles/mixins.module.scss";
+
+.cardContainer {
+  width: 100%;
+  border: 1px solid getColor("accent-blue");
+
+  @include respond-mob-minMax {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include respond-to("tablet") {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  @include respond-to("desktop") {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}
+
+.cardImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cardContentBox {
+  padding: 16px 16px 24px 16px;
+
+  @include respond-to("tablet") {
+    padding: 16px;
+  }
+
+  @include respond-to("desktop") {
+    padding: 24px;
+  }
+}
+
+.cardTitleBox {
+  display: flex;
+  margin-bottom: 16px;
+
+  @include respond-tab-minMax {
+    display: block;
+  }
+}
+
+.cardTitleSpan {
+  margin-right: 16px;
+
+  font-family: $kanit;
+  font-size: getFontSize("l-small");
+  font-weight: 500;
+  line-height: 1.3;
+
+  @include respond-to("tablet") {
+    font-size: getFontSize("m-medium");
+  }
+
+  @include respond-to("desktop") {
+    font-size: getFontSize("l-medium");
+  }
+}
+
+.cardDescription {
+  margin-bottom: 24px;
+
+  @include respond-to("tablet") {
+    min-height: 147px;
+  }
+
+  @include respond-to("desktop") {
+    min-height: 116px;
+    margin-bottom: 16px;
+  }
+}
+
+.btnIcon {
+  margin-right: 7px;
+  stroke: getColor("white");
+}

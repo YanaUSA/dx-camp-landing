@@ -50,8 +50,8 @@ const RegisterForm = () => {
   };
 
   return (
-      <div className={styles}>
-        <form className={styles} onSubmit={handleSubmit}>
+ 
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div>
             <label htmlFor="email" className={styles}>
               <span className={styles}>*</span>
@@ -244,7 +244,7 @@ const RegisterForm = () => {
             </button>
           </div>
         </form>
-      </div>
+
   );
 };
 

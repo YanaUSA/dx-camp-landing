@@ -4,7 +4,7 @@
 @import "../../styles/mixins.module.scss";
 
 .header {
-  outline: 1px solid red;
+  // outline: 1px solid red;
 
   position: fixed;
   z-index: 99;
@@ -17,6 +17,7 @@
   @include respond-to("tablet") {
     padding-top: 15px;
     padding-bottom: 15px;
+    border-bottom: 1px solid getColor("accent-blue");
   }
 }
 
@@ -40,6 +41,6 @@ nav {
 }
 
 .btnIcon {
-  margin-right: 10px;
+  margin-right: 7px;
   stroke: getColor("white");
 }

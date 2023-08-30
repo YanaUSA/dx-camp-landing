@@ -1,23 +1,27 @@
-import RegisterForm from '../RegisterForm/RegisterForm'
+import RegisterForm from "../RegisterForm/RegisterForm";
 
-// import styles from './JoinUsSection.module.scss';
+import styles from "./JoinUsSection.module.scss";
 
 const JoinUsSection = () => {
   return (
-    <section>
-      <div>
+    <section className={styles.sectionJoinUs}>
+      <div className={styles.titleBox}>
         <h2>Join Us</h2>
-        <span>03</span>
+        <span className={styles.sectionTitleSpan}>03</span>
       </div>
-      <div>
-        <h3>Experience the Power of StarRunner</h3>
-        <p>
-          Join Our Community and Embark on a Journey of Opportunities. Discover
-          the full range of our services that cater to your needs. We've got you
-          covered with top-notch solutions.
-        </p>
+      <div className={styles.joinUsContainer}>
+        <div className={styles.sectionDescriptionContainer}>
+          <h3 className={styles.sectionDescriptionTitle}>
+            Experience the Power of StarRunner
+          </h3>
+          <p className={styles.sectionDescription}>
+            Join Our Community and Embark on a Journey of Opportunities.
+            Discover the full range of our services that cater to your needs.
+            We've got you covered with top-notch solutions.
+          </p>
+        </div>
+        <RegisterForm />
       </div>
-      <RegisterForm/>
     </section>
   );
 };

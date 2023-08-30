@@ -5,7 +5,8 @@ const Footer = () => {
   return (
     <>
       <footer className={styles.footer}>
-        <ul className={styles.socialLinksList}>
+        <div className={styles.footerBox}>
+          <ul className={styles.socialLinksList}>
           <li className={styles.socialLinksItem}>
             <a className={styles.socialLinksItem__link} target="_blank" href="#">
               <Icon
@@ -47,10 +48,9 @@ const Footer = () => {
             </a>
           </li>         
         </ul>
-        <div className={styles.footerInfoBox}>
-          <p className={styles.developedBy}>Designed by Dexola - 2023</p>
-          <p className={styles.copywrite}>&#169; All rights reserved</p>
-        </div>
+        <p className={styles.developedBy}>Designed by Dexola - 2023</p>
+        <p className={styles.copywrite}>&#169; All rights reserved</p></div>
+        
       </footer>
     </>
   );

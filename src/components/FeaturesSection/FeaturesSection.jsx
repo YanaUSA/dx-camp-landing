@@ -1,22 +1,24 @@
-import FeaturesCard from '../FeaturesCard/FeaturesCard'
-// import styles from "./featuresSection.module.scss";
+import FeaturesCard from "../FeaturesCard/FeaturesCard";
+import styles from "./FeaturesSection.module.scss";
 
 const FeaturesSection = () => {
   return (
     <section>
-      <div>
+      <div className={styles.titleBox}>
         <h2>Features</h2>
-        <span>01</span>
+        <span className={styles.sectionTitleSpan}>01</span>
       </div>
-      <div>
-        <h3>About StarRunner</h3>
-        <p>
+      <div className={styles.sectionDescriptionContainer}>
+        <h3 className={styles.sectionDescriptionTitle}>About StarRunner</h3>
+        <p className={styles.sectionDescription}>
           The StarRunner Blockchain Ecosystem isn't a mere playground; it's a
           living, evolving entity that adapts to the desires and creativity of
           its players.
         </p>
-        </div>
-        <FeaturesCard/>      
+      </div>
+      <div className={styles.cardsContainerBox}>
+        <FeaturesCard />
+      </div>
     </section>
   );
 };

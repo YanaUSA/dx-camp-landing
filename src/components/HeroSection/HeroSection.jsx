@@ -6,7 +6,7 @@ const HeroSection = () => {
       <div>
         <ul>
           <li>
-            <picture>
+            {/* <picture>
               <source
                 srcSet="src/assets/images/1-1-tab.jpg, ./images/team1-pc@2x.jpg 2x"
                 media="(min-width: 1200px)"
@@ -27,7 +27,7 @@ const HeroSection = () => {
                 src="./images/team1-tab.jpg"
                 alt="Dexola hero picture"
               />
-            </picture>
+            </picture> */}
           </li>
           {/* <img src="src/assets/images/1-1-tab.jpg" alt="Dexola hero picture" />
         <img src="src/assets/images/1-2-tab.jpg" alt="Dexola hero picture" /> */}
