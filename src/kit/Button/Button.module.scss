@@ -42,18 +42,15 @@
   &.featuresBtn {
     width: 100%;
     padding: 12px;
-
-    @include respond-to("tablet") {
-      // width: auto;
-      // margin-right: 19px;
-    }
   }
 
   &.formBtn {
+    width: 100%;
     padding: 12px;
+    margin-top: 16px;
 
     @include respond-to("tablet") {
-      // width: 235px;
+      width: 235px;
     }
   }
 

@@ -1,3 +1,4 @@
+import Icon from "../../kit/Icon/Icon";
 import RegisterForm from "../RegisterForm/RegisterForm";
 
 import styles from "./JoinUsSection.module.scss";
@@ -19,6 +20,12 @@ const JoinUsSection = () => {
             Discover the full range of our services that cater to your needs.
             We've got you covered with top-notch solutions.
           </p>
+          <Icon
+            name="icon-LongArrow"
+            widthSize="64"
+            heightSize="14"
+            iconClass={styles.btnIcon}
+          />
         </div>
         <RegisterForm />
       </div>

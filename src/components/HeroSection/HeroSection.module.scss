@@ -31,3 +31,53 @@
 .heroDescription {
   color: getColor("white");
 }
+
+
+
+.slider {
+  margin: auto;
+  background-color: transparent;
+}
+
+// .slider a {
+//   position: absolute;
+// }
+
+.images {
+
+  // animation-name: slider;
+
+animation-name: sliderRevercse;
+
+  animation-duration: 4s;
+
+  // animation-timing-function: cubic-bezier(1, -0.32, 0.85, 1.51);
+  animation-iteration-count: infinite;
+}
+
+// @keyframes slider {
+//   0% {
+//     opacity: 1;
+//   }
+//   80% {
+//     opacity: 0.5;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+@keyframes sliderRevercse {
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}

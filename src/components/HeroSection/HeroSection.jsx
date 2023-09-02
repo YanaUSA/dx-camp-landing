@@ -1,10 +1,35 @@
+import { useEffect, useState } from "react";
 import styles from "./HeroSection.module.scss";
 
+const imgArr = [
+  "src/assets/images/1-1-pc.jpg",
+  "src/assets/images/1-2-pc.jpg",
+  "src/assets/images/1-3-pc.jpg",
+  "src/assets/images/1-4-pc.jpg",
+  "src/assets/images/1-5-pc.jpg",
+];
+
 const HeroSection = () => {
+  const [count, setCount] = useState(0);
+  // useEffect(() => {
+  //   // console.log("hi!!!!!!!!!!!!!!!!!!!", count);
+
+  //   const timer = setInterval(() => {
+  //     // cycle prevCount using mod instead of checking for hard-coded length
+  //     setCount((prevCount) => (prevCount + 1) % imgArr.length);
+  //   }, 4000);
+  //   // automatically clear timer the next time this effect is fired or
+  //   // the component is unmounted
+  //   return () => clearInterval(timer);
+  // });
+
   return (
     <section className={styles.heroContainer}>
       <div>
         <ul>
+        {/* <li className={styles.slider}>
+            <img src={imgArr[count]} className={styles.images} />
+          </li> */}
           <li>
             {/* <picture>
               <source
