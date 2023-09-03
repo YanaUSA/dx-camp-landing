@@ -1,0 +1,85 @@
+@import "../../../styles/breakpoints.module.scss";
+@import "../../../styles/theme-colors.module.scss";
+@import "../../../styles/fonts.module.scss";
+@import "../../../styles/mixins.module.scss";
+
+.textStyle {
+  line-height: 1.28;
+  font-size: getFontSize("m-small");
+  color: getColor("light-grey");
+}
+
+.boldTextStyle {
+  font-family: $kanit;
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: getFontSize("l-small");
+}
+
+.NFTList {
+  li:nth-child(even) {
+    background-color: getColor("table-background");
+  }
+}
+
+.listWrapper {
+  border-bottom: 1px solid getColor("accent-blue");
+  padding-bottom: 16px;
+
+  &:not(:first-child) {
+    padding-top: 16px;
+  }
+}
+
+.mobNFTtable {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.rarityLevel {
+  grid-area: 2 / 2 / 3 / 3;
+  min-height: fit-content;
+}
+.totalGames {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.gamesWon {
+  grid-area: 4 / 2 / 5 / 3;
+}
+.rarityLevelValue {
+  grid-area: 2 / 3 / 3 / 4;
+  text-align: right;
+}
+.totalGamesValue {
+  grid-area: 3 / 3 / 4 / 4;
+  text-align: right;
+}
+.gamesWonValue {
+  grid-area: 4 / 3 / 5 / 4;
+  text-align: right;
+}
+.NFTuserAvatar {
+  grid-area: 2 / 1 / 5 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+}
+.NFTName {
+  grid-area: 1 / 1 / 2 / 3;
+  margin-bottom: 12px;
+}
+.Price {
+  grid-area: 1 / 3 / 2 / 4;
+  margin-bottom: 12px;
+  text-align: right;
+}
+
+.userAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}

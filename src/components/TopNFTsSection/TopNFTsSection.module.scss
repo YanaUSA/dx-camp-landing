@@ -74,7 +74,7 @@
         padding: 12px 24px;
       }
     }
-  }
+}
 
   th:nth-child(1) {
     width: 64px;
@@ -85,19 +85,19 @@
   }
 
   th:nth-child(3) {
-    width: 15%;
+    width: 18%;
   }
 
   th:nth-child(4) {
-    width: 16%;
+    width: 13%;
   }
 
   th:nth-child(5) {
-    width: 15%;
+    width: 13%;
   }
 
   th:nth-child(6) {
-    width: 15%;
+    width: 13%;
   }
 }
 
@@ -114,13 +114,13 @@
     font-size: getFontSize("s-medium");
   }
 
-  tr:nth-child(odd) {
-    background-color: getColor("table-background");    
+  tr:nth-child(even) {
+    background-color: getColor("table-background");
   }
 
   td {
     border-bottom: 1px solid getColor("accent-blue");
-    
+
     @include respond-to("tablet") {
       &:not(:first-child) {
         padding: 29px 24px;
@@ -135,7 +135,7 @@
   }
 }
 
-.NFTuserAvatar {
+.userAvatar {
   width: 64px;
   height: 64px;
   border-radius: 50%;
