@@ -1,66 +1,93 @@
-import { useEffect, useState } from "react";
+import { Fade } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+import { imagFirstBox, imagSecondBox } from "./imagesArr";
 import styles from "./HeroSection.module.scss";
 
-const imgArr = [
-  "src/assets/images/1-1-pc.jpg",
-  "src/assets/images/1-2-pc.jpg",
-  "src/assets/images/1-3-pc.jpg",
-  "src/assets/images/1-4-pc.jpg",
-  "src/assets/images/1-5-pc.jpg",
-];
-
 const HeroSection = () => {
-  const [count, setCount] = useState(0);
-  // useEffect(() => {
-  //   // console.log("hi!!!!!!!!!!!!!!!!!!!", count);
 
-  //   const timer = setInterval(() => {
-  //     // cycle prevCount using mod instead of checking for hard-coded length
-  //     setCount((prevCount) => (prevCount + 1) % imgArr.length);
-  //   }, 4000);
-  //   // automatically clear timer the next time this effect is fired or
-  //   // the component is unmounted
-  //   return () => clearInterval(timer);
-  // });
+  const { mediaMob, mediaTab, mediaDesc } = {
+    mediaMob: "(min-width: 375px)",
+    mediaTab: "(min-width: 744px)",
+    mediaDesc: "(min-width: 1440px)",
+  };
 
   return (
-    <section className={styles.heroContainer}>
-      <div>
-        <ul>
-        {/* <li className={styles.slider}>
-            <img src={imgArr[count]} className={styles.images} />
-          </li> */}
-          <li>
-            {/* <picture>
-              <source
-                srcSet="src/assets/images/1-1-tab.jpg, ./images/team1-pc@2x.jpg 2x"
-                media="(min-width: 1200px)"
-              />
+    <section>
+      <div className={styles.heroContainer}>
+        <div className={styles.sliderWrapper}>
+          <div className={styles.slideContainer}>
+            <Fade
+              duration={2000}
+              transitionDuration={1500}
+              arrows={false}
+              pauseOnHover={false}
+              canSwipe={false}
+            >
+              {imagFirstBox.map(
+                ({
+                  id,
+                  imageMob,
+                  imageTab,
+                  imageDesc,
+                  imageDefault,
+                  image_alt,
+                }) => (
+                  <div key={id}>
+                    <picture>
+                      <source srcSet={imageDesc} media={mediaDesc} />
+                      <source srcSet={imageTab} media={mediaTab} />
+                      <source srcSet={imageMob} media={mediaMob} />
+                      <img
+                        src={imageDefault}
+                        alt={image_alt}
+                        style={{ width: "100%" }}
+                      />
+                    </picture>
+                  </div>
+                )
+              )}
+            </Fade>
+          </div>
+          <div className={styles.slideContainer}>
+            <Fade
+              duration={2000}
+              transitionDuration={1500}
+              arrows={false}
+              pauseOnHover={false}
+              canSwipe={false}
+            >
+              {imagSecondBox.map(
+                ({
+                  id,
+                  imageMob,
+                  imageTab,
+                  imageDesc,
+                  imageDefault,
+                  image_alt,
+                }) => (
+                  <div key={id}>
+                    <picture>
+                      <source srcSet={imageDesc} media={mediaDesc} />
+                      <source srcSet={imageTab} media={mediaTab} />
+                      <source srcSet={imageMob} media={mediaMob} />
+                      <img
+                        src={imageDefault}
+                        alt={image_alt}
+                        style={{ width: "100%" }}
+                      />
+                    </picture>
+                  </div>
+                )
+              )}
+            </Fade>
+          </div>
+        </div>
+        <div className={styles.heroWrapperBorder}></div>
+        <h1 className={styles.heroTitle}>dexola camp</h1>
 
-              <source
-                srcSet="./images/team1-tab.jpg 1x, ./images/team1-tab@2x.jpg 2x"
-                media="(min-width: 768px)"
-              />
-
-              <source
-                srcSet="./images/team1-mob.jpg 1x, ./images/team1-mob@2x.jpg 2x"
-                media="(max-width: 767px)"
-              />
-
-              <img
-                className={styles}
-                src="./images/team1-tab.jpg"
-                alt="Dexola hero picture"
-              />
-            </picture> */}
-          </li>
-          {/* <img src="src/assets/images/1-1-tab.jpg" alt="Dexola hero picture" />
-        <img src="src/assets/images/1-2-tab.jpg" alt="Dexola hero picture" /> */}
-        </ul>
-        {/* <h1 className={styles.heroTitle}>dexola camp</h1> */}
         <p className={styles.heroDescription}>
           Prepare to be transported beyond the boundaries of traditional gaming
-          with the StarRunner Ecosystem – the beating heart that drives the
+          with the StarRunner Ecosystem - the beating heart that drives the
           adrenaline-charged galactic P2E odyssey of 'StarRunner.'
         </p>
       </div>

@@ -15,7 +15,12 @@
   @include respond-to("tablet") {
     padding-top: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid getColor("accent-blue");
+  }
+
+  @include respond-to("desktop") {
+
+    border-bottom: 1px solid;
+    border-color: getColor("accent-blue");
   }
 }
 

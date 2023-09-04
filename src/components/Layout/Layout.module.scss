@@ -6,16 +6,9 @@
 // --- common landing margin styles --- //
 
 .container {
+  position: relative;
   margin: 0 auto;
   padding: 0 24px;
-
-  @include respond-to("mobile") {
-    // width: 375px;
-  }
-
-  @include respond-to("tablet") {
-    // width: 744px;
-  }
 
   @include respond-to("desktop") {
     width: 1440px;
@@ -24,11 +17,11 @@
 }
 
 main {
-  // width: 100%;
-  margin-top: 42px;
+  margin-top: 45px;
+  position: relative;
 
   @include respond-to("tablet") {
-    margin-top: 80px;
+    margin-top: 83px;
   }
 }
 
@@ -49,6 +42,7 @@ section {
   }
 
   @include respond-to("desktop") {
+    position: relative;
 
     &:not(:first-child) {
       margin-top: 125px;

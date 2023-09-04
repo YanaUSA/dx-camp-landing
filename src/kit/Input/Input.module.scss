@@ -4,120 +4,92 @@
 @import "../../styles/mixins.module.scss";
 
 .label {
-    // background-color: beige;
-    display: flex;
-    // flex-direction: column;
-    // gap: 6px;
+  display: flex;
 }
 
 .labelText {
-    // background-color: red;
-   display: inline-flex;
-//    align-items: center;
-   margin: 0;
-//    padding: 8px 0 14px 0;
+  display: inline-flex;
+  margin: 0;
 
-   font-size: getFontSize("m-small");
-   line-height: 1.5;
-   font-weight: 400;
-   color: getColor("white");
+  font-size: getFontSize("m-small");
+  line-height: 1.5;
+  font-weight: 400;
+  color: getColor("white");
 }
 
 .inputContainer {
-    // position: relative;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: start;
-    width: 100%;
+  width: 100%;
+  height: 68px;
+  margin-bottom: 16px;
 
-    &::before { 
-        content: "*"; 
-        position: absolute;
-        padding-top: 10px;
-        color: getColor("warning-rose");
-
-        font-size: getFontSize("m-small");
-        line-height: 1.5;
-        font-weight: 400;
-        
-    }
-};
-
-.inputComponent {
-// {icon, type, resetButton }
-    width: 100%;
-    outline: 1px solid transparent;
-    // border: '1px solid ' + theme.color.inputBorderColor,
-    // [type="submit"]
-    // paddingRight: resetButton ? theme.space.x10 : theme.space.x4,
-    // paddingLeft: theme.space.x4,
-    // background-color: rgb(49, 78, 203);
-    padding: 8px 10px 14px 30px;
-    border-bottom: 1px solid getColor("white");
-    
-    box-sizing: border-box;
-    margin-bottom: 4px;
-
-    // // to do styles for focus?
-    // //   &:focus-visible: {
-    // //     border-color: blue,
-    // //   }
+  &::before {
+    content: "*";
+    position: absolute;
+    padding-top: 10px;
+    color: getColor("warning-rose");
 
     font-size: getFontSize("m-small");
     line-height: 1.5;
     font-weight: 400;
-    color: getColor("white");
+  }
+}
 
-    @include respond-to("tablet"){
-        font-size: getFontSize("l-small");
+.inputComponent {
+  box-sizing: border-box;
+  width: 100%;
+  outline: 1px solid transparent;
+  padding: 8px 10px 14px 30px;
+  border-bottom: 1px solid getColor("white");
+  margin-bottom: 4px;
+
+  font-size: getFontSize("m-small");
+  line-height: 1.5;
+  font-weight: 400;
+  color: getColor("white");
+
+  @include respond-to("tablet") {
+    font-size: getFontSize("l-small");
+  }
+
+  @include respond-to("desktop") {
+    font-size: getFontSize("s-medium");
+  }
+
+  &::placeholder {
+    font-size: getFontSize("m-small");
+    line-height: 1.5;
+    font-weight: 400;
+    color: getColor("light-grey");
+
+    @include respond-to("tablet") {
+      font-size: getFontSize("l-small");
     }
 
-    @include respond-to("desktop"){
-        font-size: getFontSize("s-medium");        
+    @include respond-to("desktop") {
+      font-size: getFontSize("s-medium");
     }
+  }
 
-    &::placeholder {
-        font-size: getFontSize("m-small");
-        line-height: 1.5;
-        font-weight: 400;
-        color: getColor("light-grey");
+  &:hover {
+    border-bottom: 1px solid getColor("accent-blue");
+  }
 
-        @include respond-to("tablet"){
-            font-size: getFontSize("l-small");
-        }
-
-        @include respond-to("desktop"){
-            font-size: getFontSize("s-medium");            
-        }
-    }
-
-    &:hover {
-        outline: 1px solid getColor("light-grey");
-    }
-    }
-
-.iconWrapper {
-// {  resetButton }
-    cursor: pointer;
-    // color: theme.color.iconColor,
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    // right: resetButton ? 0 : '',
-    // transform: resetButton ? 'translate(-50%, -50%)' : '',
-};
+  &:focus-visible {
+    outline: 1px solid getColor("accent-blue");
+  }
+}
 
 .inputError {
-    // outline: 1px solid yellow;
-    // height: 24px;
-    // position: absolute;
-    // bottom: 50%;
-    // left: 0;
-    // bottom: -28px;
-    bottom: 28px;
-
+    height: 24px;
     font-size: getFontSize("s-small");
     color: getColor("warning-rose");
-};
+    animation: fadein 70ms $cubic;
+  }
+  
+  .error {
+      border-bottom: 1px solid getColor("warning-rose");
+  }
+  
+    @keyframes fadein {
+      0%   { opacity: 0; }
+  }

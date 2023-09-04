@@ -6,32 +6,26 @@ const InputWithIcon = ({
   name,
   labelTitle,
   placeholder,
-  type = "text",
-  disabled = false,
-  value,
+  type = { type },
+  disabled,
+  value = { value },
   labelStyle,
   labelTextStyle,
   inputStyle,
   inputError,
   eyeButton,
-  // resetButton,
-  // showInputValue,
-  // resetValue,
   handleBlur,
-  // error,
-  onChange,
+  onChange = { onChange },
   ariaLabel,
-  ariaInvalid,
+  ariaInvalid = { ariaInvalid },
   ariaDescribedby,
+  required = { required },
 }) => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  // const [passwordError, setPasswordError] = useState("");
-  // const [confirmPasswordError, setConfirmPasswordError] = useState("");
 
-  // const [comingValue, setComingValue] = useState(false);
+  console.log("Password0000000000000:", password);
 
-  // const handleShowPassword = ({ target: { name } }) => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -48,8 +42,11 @@ const InputWithIcon = ({
       <div className={`${styles.inputContainer} ${inputStyle}`}>
         <input
           autoComplete="off"
-          className={`${styles.inputComponent} ${inputStyle}`}
-          // type={type}
+          className={
+            inputError
+              ? `${styles.inputComponent} ${inputStyle} ${styles.error}`
+              : `${styles.inputComponent} ${inputStyle}`
+          }
           type={showPassword ? "text" : "password"}
           name={name}
           placeholder={placeholder}
@@ -57,21 +54,14 @@ const InputWithIcon = ({
           value={password}
           inputError={inputError}
           eyeButton={eyeButton}
-          // resetbutton={resetButton}
-          // showInputValue={showInputValue}
-          // resetValue={resetValue}
           onBlur={handleBlur}
-          // onChange={onChange}
           onChange={handlePasswordChange}
           aria-label={ariaLabel}
           aria-invalid={ariaInvalid}
           aria-describedby={ariaDescribedby}
+          required
         />
         {eyeButton && (
-          // <div onClick={showValue} className={styles.iconWrapper} eyeButton>
-          //   <Icon name="icon-eye-closed" widthSize="24" heightSize="24"/>
-          // </div>
-
           <button
             eyeButton
             type="button"
@@ -96,11 +86,6 @@ const InputWithIcon = ({
             )}
           </button>
         )}
-        {/* {passwordError && (
-          <p id={ariaDescribedby} className={styles.inputError}>
-            {passwordError}
-          </p>
-        )} */}
         {inputError && (
           <p id={ariaDescribedby} className={styles.inputError}>
             {inputError}
