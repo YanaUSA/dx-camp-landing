@@ -4,7 +4,6 @@ import { imagFirstBox, imagSecondBox } from "./imagesArr";
 import styles from "./HeroSection.module.scss";
 
 const HeroSection = () => {
-
   const { mediaMob, mediaTab, mediaDesc } = {
     mediaMob: "(min-width: 375px)",
     mediaTab: "(min-width: 744px)",
@@ -12,7 +11,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section>
+    <section className={styles.heroSection}>
       <div className={styles.heroContainer}>
         <div className={styles.sliderWrapper}>
           <div className={styles.slideContainer}>
@@ -22,6 +21,7 @@ const HeroSection = () => {
               arrows={false}
               pauseOnHover={false}
               canSwipe={false}
+              
             >
               {imagFirstBox.map(
                 ({
@@ -40,7 +40,7 @@ const HeroSection = () => {
                       <img
                         src={imageDefault}
                         alt={image_alt}
-                        style={{ width: "100%" }}
+                        style={{ width: "100%", height: "100%"}}                        
                       />
                     </picture>
                   </div>
@@ -55,6 +55,7 @@ const HeroSection = () => {
               arrows={false}
               pauseOnHover={false}
               canSwipe={false}
+              
             >
               {imagSecondBox.map(
                 ({
@@ -73,7 +74,7 @@ const HeroSection = () => {
                       <img
                         src={imageDefault}
                         alt={image_alt}
-                        style={{ width: "100%" }}
+                        style={{ width: "100%", height: "100%" }}
                       />
                     </picture>
                   </div>
@@ -81,8 +82,9 @@ const HeroSection = () => {
               )}
             </Fade>
           </div>
+          <div className={styles.heroWrapperBorder}></div>
         </div>
-        <div className={styles.heroWrapperBorder}></div>
+        
         <h1 className={styles.heroTitle}>dexola camp</h1>
 
         <p className={styles.heroDescription}>

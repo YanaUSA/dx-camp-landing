@@ -13,20 +13,24 @@
   }
 }
 
+.heroSection {
+  @include respond-mob-minMax {
+    padding-top: 13px;
+  }
+
+  @include respond-tab-minMax {
+    padding-top: 9px;
+  }
+}
+
 .heroContainer {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 13px;
-
-  @include respond-to("tablet") {
-    margin-top: 9px;
-  }
 
   @include respond-to("desktop") {
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-top: 0;
     margin-bottom: 420px;
   }
 }
@@ -34,12 +38,12 @@
 .sliderWrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center;  
+  }
 
 .slideContainer {
   width: 164px;
-  height: auto;
+
   border: 1px solid;
   border-color: getColor("accent-blue");
 
@@ -53,19 +57,20 @@
 }
 
 .heroWrapperBorder {
-  // @include visually-hidden;
-    background-color: #fff;
-    height: 20px;
+  @include respond-mob-minMax {
+    @include visually-hidden;
+  }
 
-    position: fixed;
-    z-index: 1;
-    top: -50%;
-    left: 0;
-    min-width: 100vw;
-    
+  @include respond-tab-minMax {
+    @include visually-hidden;
+  }
+
   @include respond-to("desktop") {
-
-
+    position: fixed;
+    z-index: 98;
+    top: 393px;
+    left: 0;
+    width: 100vw;
     border-top: 1px solid;
     border-color: getColor("accent-blue");
   }
@@ -75,7 +80,7 @@
   position: absolute;
   z-index: 1;
   top: 50%;
-  left: 100%;
+  left: 110%;
   white-space: nowrap;
   animation-name: runningLine;
   animation-duration: 5s;

@@ -56,8 +56,6 @@ export const imagFirstBox = [
     },
   ];
 
-  ////////////////////////////////////////////////////
-  
   export const imagSecondBox = [
     {
       id: "01",

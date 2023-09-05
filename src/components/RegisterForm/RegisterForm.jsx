@@ -30,13 +30,15 @@ const RegisterForm = () => {
         return setPhone(value);
       case "password":
         return setPassword(value);
-      case "confirm-password":
+      case "confirmPassword":
         return setConfirmPassword(value);
       default:
         return;
     }
   };
-  /////////////// validation part ////////////
+
+  ////////////// start of validation part ////////////
+
   const validateEmail = () => {
     if (email.trim() === "") {
       setEmailError("Please complete this field");
@@ -58,11 +60,6 @@ const RegisterForm = () => {
   };
 
   const validatePassword = () => {
-
-  
-      console.log("Password:", password);
-
-      
     if (password.trim() === "") {
       setPasswordError("Please complete this field");
     } else if (!password.match(passwordRegEx)) {
@@ -73,19 +70,17 @@ const RegisterForm = () => {
   };
 
   const validateConfirmPassword = () => {
-
-      console.log("ConfirmPassword:", confirmPassword);
-      
     if (confirmPassword.trim() === "") {
       setConfirmPasswordError("Please complete this field");
-    } else if (confirmPassword.toString() !== password.toString()) {
-      // } else if (!confirmPassword.toString().match(password.toString())) {
-      setConfirmPasswordError("Password does not match entered password");
+      } else if (!confirmPassword.toString().match(password.toString())) {
+      setConfirmPasswordError("No match with entered password");
     } else {
       setConfirmPasswordError("");
     }
   };
-  //////////////////////////////////////////
+
+    /////////////// end of validation part ////////////
+
 
   const handleBlurChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -132,7 +127,6 @@ const RegisterForm = () => {
         ariaDescribedby="email-error"
         required
       />
-
       <Input
         name="phone"
         placeholder="+38(0__) ___ __ __"
@@ -148,7 +142,6 @@ const RegisterForm = () => {
         ariaDescribedby="phone-error"
         required
       />
-
       <InputWithIcon
         name="password"
         placeholder="Password"
@@ -166,7 +159,6 @@ const RegisterForm = () => {
         ariaDescribedby="password-error"
         required
       />
-
       <InputWithIcon
         name="confirmPassword"
         placeholder="Confirm Password"
@@ -183,7 +175,7 @@ const RegisterForm = () => {
         ariaInvalid={confirmPasswordError ? "true" : "false"}
         ariaDescribedby="confirm-password-error"
         required
-      />
+      />        
       <div>
         <Button variant="formBtn" type="submit">
           <Icon

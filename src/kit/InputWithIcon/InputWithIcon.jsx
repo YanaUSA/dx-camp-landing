@@ -15,7 +15,7 @@ const InputWithIcon = ({
   inputError,
   eyeButton,
   handleBlur,
-  onChange = { onChange },
+  onChange = {onChange},
   ariaLabel,
   ariaInvalid = { ariaInvalid },
   ariaDescribedby,
@@ -24,14 +24,12 @@ const InputWithIcon = ({
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  console.log("Password0000000000000:", password);
-
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
+  const handlePasswordChange = (value) => {
+    setPassword(onChange(value));
   };
 
   return (
@@ -51,7 +49,7 @@ const InputWithIcon = ({
           name={name}
           placeholder={placeholder}
           disabled={disabled}
-          value={password}
+          value={value}
           inputError={inputError}
           eyeButton={eyeButton}
           onBlur={handleBlur}
@@ -63,7 +61,6 @@ const InputWithIcon = ({
         />
         {eyeButton && (
           <button
-            eyeButton
             type="button"
             className={styles.iconWrapper}
             onClick={togglePasswordVisibility}

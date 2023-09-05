@@ -11,6 +11,7 @@ const Input = ({
   labelStyle,
   labelTextStyle,
   inputStyle,
+  eyeButton,
   inputError,
   handleBlur,
   onChange,
@@ -38,6 +39,7 @@ const Input = ({
           placeholder={placeholder}
           disabled={disabled}
           value={value}
+          eyeButton={eyeButton}
           inputError={inputError}
           onBlur={handleBlur}
           onChange={onChange}
