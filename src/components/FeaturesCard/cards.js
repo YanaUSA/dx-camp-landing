@@ -1,3 +1,5 @@
+import {  } from "module";
+
 export const cards = [
   {
     id: "01",
