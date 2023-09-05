@@ -9,15 +9,15 @@ const JoinUsSection = () => {
   return (
     <section className={styles.sectionJoinUs}>
       <div className={styles.titleBox}>
-        <h2>Join Us</h2>
-        <span className={styles.sectionTitleSpan}>03</span>
+        <h2 aria-label="Join Us Section Title">Join Us</h2>
+        <span className={styles.sectionTitleSpan} aria-label="section order number">03</span>
       </div>
       <div className={styles.joinUsContainer}>
         <div className={styles.sectionDescriptionContainer}>
-          <h3 className={styles.sectionDescriptionTitle}>
+          <h3 className={styles.sectionDescriptionTitle} aria-label="Join Us section description title">
             Experience the Power of StarRunner
           </h3>
-          <p className={styles.sectionDescription}>
+          <p className={styles.sectionDescription} aria-label="Join Us section description">
             Join Our Community and Embark on a Journey of Opportunities.
             Discover the full range of our services that cater to your needs.
             We've got you covered with top-notch solutions.

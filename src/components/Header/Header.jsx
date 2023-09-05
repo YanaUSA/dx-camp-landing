@@ -12,8 +12,8 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div>
-        <nav>
-          <Link to={clientSite} target="_blank" className={styles.logoLink}>
+        <nav role="navigation">
+          <Link to={clientSite} target="_blank" className={styles.logoLink} aria-label="Dexola homepage">
             <Icon name="icon-Logo" widthSize="35" heightSize="20" />
           </Link>
           <HashLink
@@ -22,7 +22,7 @@ const Header = () => {
               el.scrollIntoView({ behavior: "smooth", block: "end" })
             }
           >
-            <Button variant="headerBtn" type="button">
+            <Button variant="headerBtn" type="button" ariaLabel="Jump to registration form">
               <Icon
                 name="icon-arrow"
                 widthSize="16"

@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <section className={styles.heroSection}>
       <div className={styles.heroContainer}>
-        <div className={styles.sliderWrapper}>
+        <div className={styles.sliderWrapper} aria-label="Image slider">
           <div className={styles.slideContainer}>
             <Fade
               duration={2000}
@@ -85,9 +85,9 @@ const HeroSection = () => {
           <div className={styles.heroWrapperBorder}></div>
         </div>
         
-        <h1 className={styles.heroTitle}>dexola camp</h1>
+        <h1 className={styles.heroTitle} aria-label="Section title">dexola camp</h1>
 
-        <p className={styles.heroDescription}>
+        <p className={styles.heroDescription} aria-describedby="Hero section description">
           Prepare to be transported beyond the boundaries of traditional gaming
           with the StarRunner Ecosystem - the beating heart that drives the
           adrenaline-charged galactic P2E odyssey of 'StarRunner.'

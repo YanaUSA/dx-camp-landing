@@ -30,10 +30,10 @@ const FeaturesCard = () => {
         <div className={styles.cardContentBox}>
           <div className={styles.cardTitleBox}>
             <span className={styles.cardTitleSpan}>{id}</span>
-            <h4>{title}</h4>
+            <h4 aria-label="Features card title">{title}</h4>
           </div>
-          <p className={styles.cardDescription}>{description}</p>
-          <Button variant="featuresBtn" type="button">
+          <p className={styles.cardDescription} aria-describedby="Features card description">{description}</p>
+          <Button variant="featuresBtn" type="button" ariaLabel={`Discover more about ${title}`}>
             <Icon
               name="icon-arrow"
               widthSize="16"

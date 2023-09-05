@@ -111,7 +111,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <form id="reg-form" className={styles.form} autoComplete="off" onSubmit={handleSubmit}>
+    <form id="reg-form" className={styles.form} autoComplete="off" onSubmit={handleSubmit} aria-label="Registration form">
       <Input
         name="email"
         placeholder="Enter email"
@@ -177,7 +177,7 @@ const RegisterForm = () => {
         required
       />        
       <div>
-        <Button variant="formBtn" type="submit">
+        <Button variant="formBtn" type="submit" ariaLabel="Sent register form Button">
           <Icon
             name="icon-Line"
             widthSize="24"
