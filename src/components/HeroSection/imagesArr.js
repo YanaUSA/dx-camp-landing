@@ -7,7 +7,7 @@ export const imagFirstBox = [
         "/src/assets/images/1-1-tab.jpg 1x, /src/assets/images/1-1-tab@2x.jpg 2x",
       imageDesc:
         "/src/assets/images/1-1-pc.jpg 1x, /src/assets/images/1-1-pc@2x.jpg 2x",
-      imageDefault: "src/assets/images/1-1-pc.jpg",
+      imageDefault: "/src/assets/images/1-1-pc.jpg",
       image_alt: "Dexola hero picture",
     },
     {
@@ -18,7 +18,7 @@ export const imagFirstBox = [
         "/src/assets/images/1-3-tab.jpg 1x, /src/assets/images/1-3-tab@2x.jpg 2x",
       imageDesc:
         "/src/assets/images/1-3-pc.jpg 1x, /src/assets/images/1-3-pc@2x.jpg 2x",
-      imageDefault: "src/assets/images/1-3-pc.jpg",
+      imageDefault: "/src/assets/images/1-3-pc.jpg",
       image_alt: "Dexola hero picture",
     },
     {
@@ -29,7 +29,7 @@ export const imagFirstBox = [
         "/src/assets/images/1-5-tab.jpg 1x, /src/assets/images/1-5-tab@2x.jpg 2x",
       imageDesc:
         "/src/assets/images/1-5-pc.jpg 1x, /src/assets/images/1-5-pc@2x.jpg 2x",
-      imageDefault: "src/assets/images/1-5-pc.jpg",
+      imageDefault: "/src/assets/images/1-5-pc.jpg",
       image_alt: "Dexola hero picture",
     },
     {
@@ -40,7 +40,7 @@ export const imagFirstBox = [
         "/src/assets/images/1-7-tab.jpg 1x, /src/assets/images/1-7-tab@2x.jpg 2x",
       imageDesc:
         "/src/assets/images/1-7-pc.jpg 1x, /src/assets/images/1-7-pc@2x.jpg 2x",
-      imageDefault: "src/assets/images/1-7-pc.jpg",
+      imageDefault: "/src/assets/images/1-7-pc.jpg",
       image_alt: "Dexola hero picture",
     },
     {
@@ -51,7 +51,7 @@ export const imagFirstBox = [
         "/src/assets/images/1-9-tab.jpg 1x, /src/assets/images/1-9-tab@2x.jpg 2x",
       imageDesc:
         "/src/assets/images/1-9-pc.jpg 1x, /src/assets/images/1-9-pc@2x.jpg 2x",
-      imageDefault: "src/assets/images/1-9-pc.jpg",
+      imageDefault: "/src/assets/images/1-9-pc.jpg",
       image_alt: "Dexola hero picture",
     },
   ];
@@ -65,7 +65,7 @@ export const imagFirstBox = [
         "/src/assets/images/1-2-tab.jpg 1x, /src/assets/images/1-2-tab@2x.jpg 2x",
       imageDesc:
         "/src/assets/images/1-2-pc.jpg 1x, /src/assets/images/1-2-pc@2x.jpg 2x",
-      imageDefault: "src/assets/images/1-2-pc.jpg",
+      imageDefault: "/src/assets/images/1-2-pc.jpg",
       image_alt: "Dexola hero picture",
     },
     {
@@ -76,7 +76,7 @@ export const imagFirstBox = [
         "/src/assets/images/1-4-tab.jpg 1x, /src/assets/images/1-4-tab@2x.jpg 2x",
       imageDesc:
         "/src/assets/images/1-4-pc.jpg 1x, /src/assets/images/1-4-pc@2x.jpg 2x",
-      imageDefault: "src/assets/images/1-4-pc.jpg",
+      imageDefault: "/src/assets/images/1-4-pc.jpg",
       image_alt: "Dexola hero picture",
     },
     {
@@ -98,7 +98,7 @@ export const imagFirstBox = [
         "/src/assets/images/1-8-tab.jpg 1x, /src/assets/images/1-8-tab@2x.jpg 2x",
       imageDesc:
         "/src/assets/images/1-8-pc.jpg 1x, /src/assets/images/1-8-pc@2x.jpg 2x",
-      imageDefault: "src/assets/images/1-8-pc.jpg",
+      imageDefault: "/src/assets/images/1-8-pc.jpg",
       image_alt: "Dexola hero picture",
     },
     {
@@ -109,7 +109,7 @@ export const imagFirstBox = [
         "/src/assets/images/1-10-tab.jpg 1x, /src/assets/images/1-10-tab@2x.jpg 2x",
       imageDesc:
         "/src/assets/images/1-10-pc.jpg 1x, /src/assets/images/1-10-pc@2x.jpg 2x",
-      imageDefault: "src/assets/images/1-10-pc.jpg",
+      imageDefault: "/src/assets/images/1-10-pc.jpg",
       image_alt: "Dexola hero picture",
     },
   ];
