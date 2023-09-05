@@ -1,16 +1,19 @@
-import {  } from "module";
+import { pic_1_PC_1x } from "../../assets/images/2-1-pc.jpg";
+import { pic_1_PC_2x } from "../../assets/images/2-1-pc@2x.jpg";
+import { pic_1_tab_1x } from "../../assets/images/2-1-tab.jpg";
+import { pic_1_tab_2x } from "../../assets/images/2-1-tab@2x.jpg";
 
 export const cards = [
   {
     id: "01",
     title: "STRU Token sale",
     imageMob:
-      "@assets/images/2-1-pc.jpg 1x, src/assets/images/2-1-pc@2x.jpg 2x",
+      `${pic_1_PC_1x} 1x, ${pic_1_PC_2x} 2x`,
     imageTab:
-      "@assets/images/2-1-tab.jpg 1x, src/assets/images/2-1-tab@2x.jpg 2x",
+      `${pic_1_tab_1x} 1x, ${pic_1_tab_2x} 2x`,
     imageDesc:
-      "@assets/images/2-1-pc.jpg 1x, src/assets/images/2-1-pc@2x.jpg 2x",
-    imageDefault: "@assets/images/2-1-pc.jpg",
+    `${pic_1_PC_1x} 1x, ${pic_1_PC_2x} 2x`,
+    imageDefault: `${pic_1_PC_1x}`,
     image_alt: "Futuristic astronaut travels through space",
     mediaMob: "(min-width: 375px)",
     mediaTab: "(min-width: 744px)",
