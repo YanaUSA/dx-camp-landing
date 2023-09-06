@@ -1,5 +1,5 @@
-import Button from "../../kit/Button/Button";
-import Icon from "../../kit/Icon/Icon";
+import Button from "@kit/Button/Button";
+import Icon from "@kit/Icon/Icon";
 import { cards } from "./cards";
 import styles from "./FeaturesCard.module.scss";
 
@@ -24,7 +24,7 @@ const FeaturesCard = () => {
           <source srcSet={imageDesc} media={mediaDesc} />
           <source srcSet={imageTab} media={mediaTab} />
           <source srcSet={imageMob} media={mediaMob} />
-          <img src={imageDefault} alt={image_alt} className={styles.cardImage}  />
+          <img src={imageDefault} alt={image_alt} width={'100%'}  height={'100%'}/>
         </picture>
 
         <div className={styles.cardContentBox}>

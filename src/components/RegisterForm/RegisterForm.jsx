@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Input from "../../kit/Input/Input";
-import InputWithIcon from "../../kit/InputWithIcon/InputWithIcon";
-import Button from "../../kit/Button/Button";
-import Icon from "../../kit/Icon/Icon";
+import Input from "@kit/Input/Input";
+import InputWithIcon from "@kit/InputWithIcon/InputWithIcon";
+import Button from "@kit/Button/Button";
+import Icon from "@kit/Icon/Icon";
 import {
   emailRegEx,
   phoneRegEx,

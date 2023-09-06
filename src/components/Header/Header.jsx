@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Button from "../../kit/Button/Button";
-import Icon from "../../kit/Icon/Icon";
+import Button from "@kit/Button/Button";
+import Icon from "@kit/Icon/Icon";
 
 import { HashLink } from "react-router-hash-link";
 

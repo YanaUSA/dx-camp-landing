@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import TopNFTMobileGrid from "./TopNFTMobileGrid/TopNFTMobileGrid";
-import useMatchMedia from "../../hooks/useMatchMedia";
+import useMatchMedia from "@hooks/useMatchMedia";
 
 import styles from "./TopNFTsSection.module.scss";
 

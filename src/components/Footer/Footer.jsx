@@ -1,4 +1,4 @@
-import Icon from "../../kit/Icon/Icon";
+import Icon from "@kit/Icon/Icon";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {

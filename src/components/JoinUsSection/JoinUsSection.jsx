@@ -1,6 +1,6 @@
-import Icon from "../../kit/Icon/Icon";
+import Icon from "@kit/Icon/Icon";
 import RegisterForm from "../RegisterForm/RegisterForm";
-import useMatchMedia from '../../hooks/useMatchMedia'
+import useMatchMedia from '@hooks/useMatchMedia'
 
 import styles from "./JoinUsSection.module.scss";
 
