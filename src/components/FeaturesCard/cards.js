@@ -1,14 +1,29 @@
+import pic_1_pc from '../../assets/images/2-1-pc.jpg'
+import pic_1_pc_2x from '../../assets/images/2-1-pc@2x.jpg'
+import pic_1_tab from '../../assets/images/2-1-tab.jpg'
+import pic_1_tab_2x from '../../assets/images/2-1-tab@2x.jpg'
+
+import pic_2_pc from '../../assets/images/2-2-pc.jpg'
+import pic_2_pc_2x from '../../assets/images/2-2-pc@2x.jpg'
+import pic_2_tab from '../../assets/images/2-2-tab.jpg'
+import pic_2_tab_2x from '../../assets/images/2-2-tab@2x.jpg'
+
+import pic_3_pc from '../../assets/images/2-3-pc.jpg'
+import pic_3_pc_2x from '../../assets/images/2-3-pc@2x.jpg'
+import pic_3_tab from '../../assets/images/2-3-tab.jpg'
+import pic_3_tab_2x from '../../assets/images/2-3-tab@2x.jpg'
+
 export const cards = [
   {
     id: "01",
     title: "STRU Token sale",
     imageMob:
-      "../../assets/assets/images/2-1-pc.jpg 1x, ../../assets/images/2-1-pc@2x.jpg 2x",
+    `${pic_1_pc} 1x, ${pic_1_pc_2x} 2x`,
     imageTab:
-      "../../assets/images/2-1-tab.jpg 1x, ../../assets/images/2-1-tab@2x.jpg 2x",
+      `${pic_1_tab} 1x, ${pic_1_tab_2x} 2x`,
     imageDesc:
-      "../../assets/images/2-1-pc.jpg 1x, ../../assets/images/2-1-pc@2x.jpg 2x",
-    imageDefault: "../../assets/images/2-1-pc.jpg",
+    `${pic_1_pc} 1x, ${pic_1_pc_2x} 2x`,
+    imageDefault: `${pic_1_pc}`,
     image_alt: "Futuristic astronaut travels through space",
     mediaMob: "(min-width: 375px)",
     mediaTab: "(min-width: 744px)",
